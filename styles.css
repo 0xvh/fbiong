@@ -1,0 +1,272 @@
+html {
+    cursor: url("wimages/ELDEN\ RING\ CURSOR.cur"), auto;
+}
+
+body {
+    background-color: #060606;
+    font-family: "Jersey 10", sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    
+}
+
+#enter {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: url("wimages/ELDEN\ RING\ CURSOR.cur"), auto;
+    z-index: 5;
+    position: absolute;
+    transition: .3s ease-in;
+    font-size: 34px;
+}
+
+.landing {
+    text-align: center;
+    position: relative;
+}
+
+.landing .ascii-art {
+    color: #c689ff;
+    white-space: pre-wrap; /* Preserve spaces and newlines */
+    font-size: 12px; /* Adjust based on preference */
+    margin-left: -75px; /* Adjust this value to move it left */
+    margin-top: -100px;
+}
+
+
+.clock {
+    position: absolute;
+    top: 0%;
+    left: -55%;
+    color: #B17BE3;
+    font-size: 30px;
+    letter-spacing: 6px;
+    
+
+}
+.date {
+    position: absolute;
+    top: 0%;
+    right: -100%; /* Mirroring the clock on the right side */
+    color: #B17BE3;
+    font-size: 30px;
+    letter-spacing: 6px;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+.socials p {
+    color: #dddddd;
+    font-size: 35px;
+    text-decoration: none;
+    
+}
+.socials a {
+    text-decoration: none;
+}
+
+.socials hr {
+    width: 65px;
+    top: 8px;
+    left: -1px;
+    position: relative;
+}
+
+.crypto {
+    word-spacing: 10px;
+    position: relative;
+    font-size: 35px;
+    margin-top: 50px;
+}
+
+
+#copy-btn-text {
+
+    color: #F7D0A0;
+}
+
+#copy-btn-text-eth {
+
+    color: #B6C1F8;
+}
+#copy-btn-text-sol {
+
+    background: linear-gradient(135deg, #8C1EFF, #4A00E0, #00FFA3); /* Gradient from purple to light green */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+}
+
+
+
+
+
+@media (max-width: 1000px) {
+    #enter {
+        display: none;
+    }
+    
+    .landing {
+        width: 100%;
+    }
+    
+    .ascii-art {
+        font-size: 9px;
+    }
+}
+
+/* Add these to your existing styles.css */
+
+/* Container to hold cursor particles */
+.cursor-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Style for the stars */
+.cursor-star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+    z-index: 999;
+    visibility: hidden;
+}
+
+.cursor-star div {
+    position: absolute;
+    background-color: #da8ee7; /* Purple color */
+}
+
+.cursor-star .bar-horizontal {
+    width: 5px;
+    height: 1px;
+    top: 2px;
+    left: 0;
+}
+
+.cursor-star .bar-vertical {
+    width: 1px;
+    height: 5px;
+    top: 0;
+    left: 2px;
+}
+
+/* Style for the tiny dots */
+.cursor-tiny {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #da8ee7; /* Purple color */
+    visibility: hidden;
+    z-index: 999;
+}
+
+/* Keyframes for moving stars up */
+@keyframes move-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100vh); /* Moves the star up through the entire viewport height */
+    }
+}
+
+/* Keyframes for moving stars down */
+@keyframes move-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh); /* Moves the star down through the entire viewport height */
+    }
+}
+
+/* Styles for small stars moving up */
+.small-star[data-direction='up'] {
+    animation: move-up 180s linear infinite; /* Slow movement */
+}
+
+/* Styles for small stars moving down */
+.small-star[data-direction='down'] {
+    animation: move-down 60s linear infinite; /* Much faster movement */
+}
+
+/* Styles for large stars moving up */
+.large-star[data-direction='up'] {
+    animation: move-up 360s linear infinite; /* Even slower movement */
+}
+
+/* Styles for large stars moving down */
+.large-star[data-direction='down'] {
+    animation: move-down 180s linear infinite; /* Faster movement */
+}
+
+#stars{
+    z-index: -1;
+}
+
+/* styles.css */
+
+/* styles.css */
+
+#popup-container {
+    position: absolute;
+    top: 20%; /* Adjust this value to fine-tune the vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+#popup-text {
+    display: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-family: 'Jersey 10', sans-serif;
+    position: relative;
+    max-width: 250px;
+    text-align: center;
+}
+
+#popup-text::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+
