@@ -1,4 +1,4 @@
-// JS/bitcoin.js
+
 
 function showPopup(message, address) {
     const popup = document.getElementById('popup-text');
@@ -7,7 +7,7 @@ function showPopup(message, address) {
 
     setTimeout(() => {
         popup.style.display = 'none';
-    }, 4000); // Display for 4 seconds
+    }, 4000); 
 }
 
 document.getElementById("copy-btn-text").onclick = function() {

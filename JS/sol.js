@@ -7,7 +7,7 @@ function showPopup(message, address) {
 
     setTimeout(() => {
         popup.style.display = 'none';
-    }, 4000); // Display for 4 seconds
+    }, 4000); 
 }
 
 document.getElementById("copy-btn-text-sol").onclick = function() {

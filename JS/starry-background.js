@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const starCount = 500; // Total number of stars to start with
+    const starCount = 500; 
     const starContainer = document.createElement('div');
     starContainer.id = 'stars';
     document.body.appendChild(starContainer);
@@ -7,16 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const width = window.innerWidth;
     const height = window.innerHeight;
     
-    // Array to keep track of stars
+  
     let stars = [];
 
     function createStar() {
         const star = document.createElement('div');
-        const size = Math.random() * 2 + 1 + 'px'; // Size range from 1px to 3px
+        const size = Math.random() * 2 + 1 + 'px'; 
         const x = Math.random() * width + 'px';
         const y = Math.random() * height + 'px';
-        const opacity = Math.random() * 0.5 + 0.5; // Random opacity
-        const direction = Math.random() > 0.5 ? 'up' : 'down'; // Random direction
+        const opacity = Math.random() * 0.5 + 0.5; 
+        const direction = Math.random() > 0.5 ? 'up' : 'down'; 
 
         star.style.position = 'absolute';
         star.style.background = 'white';
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         star.style.top = y;
         star.style.opacity = opacity;
 
-        // Add class and data attribute for direction
+       
         if (parseFloat(size) <= 2) {
             star.classList.add('small-star');
         } else {
@@ -43,24 +43,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const viewportHeight = window.innerHeight;
         const viewportWidth = window.innerWidth;
 
-        // Remove stars that have moved out of the viewport and create new ones
+      
         stars.forEach((star, index) => {
             const rect = star.getBoundingClientRect();
             if (rect.top > viewportHeight || rect.bottom < 0 || rect.left > viewportWidth || rect.right < 0) {
                 star.remove();
-                stars.splice(index, 1); // Remove star from array
+                stars.splice(index, 1); 
 
                 // Generate a new star at the edge of the viewport
                 const newStar = document.createElement('div');
-                const size = Math.random() * 2 + 1 + 'px'; // Size range from 1px to 3px
-                const direction = Math.random() > 0.5 ? 'up' : 'down'; // Random direction
+                const size = Math.random() * 2 + 1 + 'px'; 
+                const direction = Math.random() > 0.5 ? 'up' : 'down';
 
                 if (direction === 'up') {
                     newStar.style.left = Math.random() * viewportWidth + 'px';
-                    newStar.style.top = viewportHeight + 'px'; // Start from the bottom
+                    newStar.style.top = viewportHeight + 'px'; 
                 } else {
                     newStar.style.left = Math.random() * viewportWidth + 'px';
-                    newStar.style.top = -parseFloat(size) + 'px'; // Start from the top
+                    newStar.style.top = -parseFloat(size) + 'px'; 
                 }
 
                 newStar.style.position = 'absolute';
@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 newStar.style.width = size;
                 newStar.style.height = size;
                 newStar.style.borderRadius = '50%';
-                newStar.style.opacity = Math.random() * 0.5 + 0.5; // Random opacity
+                newStar.style.opacity = Math.random() * 0.5 + 0.5; 
 
-                // Add class and data attribute for direction
+                
                 if (parseFloat(size) <= 2) {
                     newStar.classList.add('small-star');
                 } else {
@@ -93,17 +93,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateStarsOnResize() {
         const starContainer = document.getElementById('stars');
         if (starContainer) {
-            starContainer.remove(); // Remove existing stars
-            stars = []; // Clear the array of stars
+            starContainer.remove(); 
+            stars = []; 
         }
-        createInitialStars(); // Create new stars
+        createInitialStars(); 
     }
 
     window.addEventListener('resize', updateStarsOnResize);
-    window.addEventListener('scroll', updateStars); // To check if stars need updating when scrolling
+    window.addEventListener('scroll', updateStars); 
 
-    createInitialStars(); // Initial star creation
+    createInitialStars(); 
 
-    // Continuously update stars
-    setInterval(updateStars, 100); // Adjust the interval as needed
+   
+    setInterval(updateStars, 100); 
 });

@@ -7,15 +7,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const tinyDots = [];
     const starRemainingTicks = [];
     const tinyRemainingTicks = [];
-    const sparkles = 250; // Total number of particles
-    const sparkleLifetime = 20; // Lifetime of each particle
-    const sparkleDistance = 30; // Distance of sparkles
+    const sparkles = 250; 
+    const sparkleLifetime = 20; 
+    const sparkleDistance = 30; 
 
     let docHeight;
     let docWidth;
     let sparklesEnabled = true;
 
-    // Initialize document size and particles
+    
     function initParticles() {
         docHeight = document.documentElement.scrollHeight;
         docWidth = document.documentElement.scrollWidth;
