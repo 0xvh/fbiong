@@ -13,6 +13,6 @@ function showPopup(message, address) {
 document.getElementById("copy-btn-text").onclick = function() {
     const btcAddress = document.getElementById("bitcoin-address").value;
     navigator.clipboard.writeText(btcAddress).then(() => {
-        showPopup("Solana Address Copied To Clipboard", btcAddress);
+        showPopup("Solana Address Copied To Clipboard:", btcAddress);
     });
 };

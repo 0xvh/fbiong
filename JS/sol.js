@@ -1,4 +1,4 @@
-// JS/sol.js
+
 
 function showPopup(message, address) {
     const popup = document.getElementById('popup-text');
@@ -13,6 +13,6 @@ function showPopup(message, address) {
 document.getElementById("copy-btn-text-sol").onclick = function() {
     const solAddress = document.getElementById("sol-address").value;
     navigator.clipboard.writeText(solAddress).then(() => {
-        showPopup("Solana Address Copied", solAddress);
+        showPopup("Solana Address Copied To Clipboard:", solAddress);
     });
 };

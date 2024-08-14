@@ -1,5 +1,3 @@
-// JS/eth.js
-
 function showPopup(message, address) {
     const popup = document.getElementById('popup-text');
     popup.textContent = `${message}\n\n${address}`;

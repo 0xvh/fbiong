@@ -14,7 +14,6 @@ body {
     align-items: center;
     height: 100vh;
     position: relative;
-    
 }
 
 #enter {
@@ -29,59 +28,72 @@ body {
     z-index: 5;
     position: absolute;
     transition: .3s ease-in;
+    
+}
+
+#enter p {
+    display: inline-block;
+    overflow: hidden; 
+    white-space: nowrap;
+    font-size: 24px; 
+    color: #fff;
+    margin: 0; 
     font-size: 34px;
 }
+
 
 .landing {
     text-align: center;
     position: relative;
+    display: none;
 }
 
 .landing .ascii-art {
     color: #c689ff;
-    white-space: pre-wrap; /* Preserve spaces and newlines */
-    font-size: 12px; /* Adjust based on preference */
-    margin-left: -75px; /* Adjust this value to move it left */
+    white-space: pre-wrap; 
+    font-size: 12px; 
+    margin-left: -105px; 
     margin-top: -100px;
 }
 
+.datetime-container {
+    display: none;
+    justify-content: space-between; 
+    align-items: center; 
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    z-index: 10; 
+    margin-bottom: 200px;
+}
 
 .clock {
-    position: absolute;
-    top: 0%;
-    left: -55%;
     color: #B17BE3;
     font-size: 30px;
     letter-spacing: 6px;
-    
 
 }
+
 .date {
-    position: absolute;
-    top: 0%;
-    right: -100%; /* Mirroring the clock on the right side */
     color: #B17BE3;
     font-size: 30px;
     letter-spacing: 6px;
-   
 }
-
-
-
-
-
-
-
-
-
-
 
 .socials p {
     color: #dddddd;
     font-size: 35px;
     text-decoration: none;
-    
+    cursor: url("wimages/ELDEN\ RING\ CURSOR.cur"), auto;
 }
+
+.socials p:hover {
+color: #B17BE3;
+transition-duration: 400ms;
+}
+
 .socials a {
     text-decoration: none;
 }
@@ -101,43 +113,22 @@ body {
 }
 
 
-#copy-btn-text {
 
+#copy-btn-text {
     color: #F7D0A0;
 }
 
 #copy-btn-text-eth {
-
     color: #B6C1F8;
 }
-#copy-btn-text-sol {
 
-    background: linear-gradient(135deg, #8C1EFF, #4A00E0, #00FFA3); /* Gradient from purple to light green */
+#copy-btn-text-sol {
+    background: linear-gradient(135deg, #8C1EFF, #4A00E0, #00FFA3); 
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
 }
-
-
-
-
-
-@media (max-width: 1000px) {
-    #enter {
-        display: none;
-    }
-    
-    .landing {
-        width: 100%;
-    }
-    
-    .ascii-art {
-        font-size: 9px;
-    }
-}
-
-/* Add these to your existing styles.css */
 
 /* Container to hold cursor particles */
 .cursor-container {
@@ -229,20 +220,16 @@ body {
     animation: move-down 180s linear infinite; /* Faster movement */
 }
 
-#stars{
+#stars {
     z-index: -1;
 }
 
-/* styles.css */
-
-/* styles.css */
-
 #popup-container {
     position: absolute;
-    top: 20%; /* Adjust this value to fine-tune the vertical position */
+    top: 20%; 
     left: 50%;
     transform: translateX(-50%);
-    pointer-events: none; /* Allows clicks to pass through */
+    pointer-events: none; 
 }
 
 #popup-text {
@@ -255,8 +242,12 @@ body {
     font-size: 14px;
     font-family: 'Jersey 10', sans-serif;
     position: relative;
-    max-width: 250px;
+    max-width: 300px;
     text-align: center;
+    word-wrap: break-word; 
+    white-space: normal;   
+    overflow: hidden;      
+
 }
 
 #popup-text::before {
@@ -269,4 +260,41 @@ body {
     border-style: solid;
     border-color: transparent transparent #333 transparent;
 }
+
+@media (max-width: 1000px) {
+   
+
+    .datetime-container {
+        display: none;
+        flex-direction: column; 
+        align-items: center; 
+        position: fixed; 
+        top: 8%; 
+        left: 0;
+        right: 0;
+        padding: 10px; 
+        z-index: 10;
+        
+    }
+
+    .clock, .date {
+        display: block; 
+        font-size: 24px; 
+        letter-spacing: 4px; 
+        color: #B17BE3; 
+        margin: 0; 
+    }
+
+    .landing {
+        margin-top: 80px; 
+        text-align: center; 
+    }
+
+    .ascii-art {
+        font-size: 10px; 
+        margin: 0; 
+        padding: 0; 
+    }
+}
+
 
