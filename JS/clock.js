@@ -37,6 +37,8 @@ $(document).ready(function(){
     // Get the audio element
     var audio = document.getElementById("audio");
 
+
+
     // Toggle play/pause on button click
     $(".play_btn").click(function(){
         $(".play_contain").toggleClass("trigger");
@@ -51,3 +53,5 @@ $(document).ready(function(){
         }
     });
 });
+
+audio.volume = .1;
