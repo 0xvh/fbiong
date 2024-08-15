@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = () => {
     const text = "click to proceed...";
     const container = document.querySelector('#enter p');
     let index = 0;
@@ -22,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (index < text.length) {
             container.textContent += text.charAt(index);
             index++;
-            setTimeout(type, 40); // Adjust the typing speed here
+            setTimeout(type, 40); 
         }
     }
 
     type();
-});
+};
 

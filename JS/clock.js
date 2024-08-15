@@ -32,3 +32,22 @@ function showDate() {
 
 showTime();
 showDate();
+
+$(document).ready(function(){
+    // Get the audio element
+    var audio = document.getElementById("audio");
+
+    // Toggle play/pause on button click
+    $(".play_btn").click(function(){
+        $(".play_contain").toggleClass("trigger");
+        
+        // Check if the audio is paused
+        if (audio.paused) {
+            audio.play();  // Play the audio
+            $(".play_btn").attr("title", "Pause");  // Update title to Pause
+        } else {
+            audio.pause(); // Pause the audio
+            $(".play_btn").attr("title", "Play");  // Update title to Play
+        }
+    });
+});
